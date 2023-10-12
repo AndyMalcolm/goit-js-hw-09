@@ -4,10 +4,12 @@ function getRandomHexColor() {
 const buttonStart = document.querySelector('[data-start]');
 const buttonStop = document.querySelector('[data-stop]');
 const body = document.body;
-let intervalId;
+let timeOutId;
 function changeBackgroundColor() {
   body.style.backgroundColor = getRandomHexColor();
 }
-function getRandomHexColor(){
-  setTimeout();
+function onStartButtonClick() {
+  startButton.disabled = true;
+  stopButton.disabled = false;
+  timeOutId = setTimeout(changeBackgroundColor, 1000);
 }
