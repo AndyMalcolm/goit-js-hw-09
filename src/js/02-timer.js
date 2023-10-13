@@ -3,6 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 function addLeadingZero(value) {
     return value.toString().padStart(2, '0');
   }
+
   function updateTimer(days, hours, minutes, seconds) {
     document.querySelector('[data-days]').textContent = addLeadingZero(days);
     document.querySelector('[data-hours]').textContent = addLeadingZero(hours);
