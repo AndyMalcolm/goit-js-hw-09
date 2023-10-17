@@ -6,4 +6,3 @@ function createPromise(position, delay) {
     // Reject
   }
 }
-//скоро начну через пару дней, i promise
