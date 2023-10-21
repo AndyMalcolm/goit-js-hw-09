@@ -29,6 +29,13 @@ const hoursElement = document.querySelector("[data-hours]");
 const minutesElement = document.querySelector("[data-minutes]");
 const secondsElement = document.querySelector("[data-seconds]");
 
+function newCalendar(timeRemaining) {
+  daysElement.textContent = addLeadingZero(timeRemaining.days);
+  hoursElement.textContent = addLeadingZero(timeRemaining.hours);
+  minutesElement.textContent = addLeadingZero(timeRemaining.minutes);
+  secondsElement.textContent = addLeadingZero(timeRemaining.seconds);
+}
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -65,9 +72,4 @@ startButton.addEventListener("click", function () {
     }
   }
 });
-function newCalendar(timeRemaining) {
-  daysElement.textContent = addLeadingZero(timeRemaining.days);
-  hoursElement.textContent = addLeadingZero(timeRemaining.hours);
-  minutesElement.textContent = addLeadingZero(timeRemaining.minutes);
-  secondsElement.textContent = addLeadingZero(timeRemaining.seconds);
-}
+
