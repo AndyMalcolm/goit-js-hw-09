@@ -41,7 +41,6 @@ const options = {
   time_24hr: true,
   minuteIncrement: 1,
   onClose: function (selectedDates) {
-    const selectedDate = selectedDates[0];
 
     if (selectedDate <= new Date()) {
       alert("Please choose a date in the future");
