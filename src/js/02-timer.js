@@ -61,10 +61,13 @@ startButton.addEventListener("click", function () {
       minutesElement.textContent = "00";
       secondsElement.textContent = "00";
     } else {
-      daysElement.textContent = addLeadingZero(timeRemaining.days);
-      hoursElement.textContent = addLeadingZero(timeRemaining.hours);
-      minutesElement.textContent = addLeadingZero(timeRemaining.minutes);
-      secondsElement.textContent = addLeadingZero(timeRemaining.seconds);
+      newCalendar(timeRemaining);
     }
   }
 });
+function newCalendar(timeRemaining) {
+  daysElement.textContent = addLeadingZero(timeRemaining.days);
+  hoursElement.textContent = addLeadingZero(timeRemaining.hours);
+  minutesElement.textContent = addLeadingZero(timeRemaining.minutes);
+  secondsElement.textContent = addLeadingZero(timeRemaining.seconds);
+}
