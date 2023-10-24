@@ -13,8 +13,9 @@ function createPromise(position, delay) {
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const position = 0;
-  const delay = 0;
+  const delay = EventTarget.elements.delay;
+  const position = EventTarget.elements.step;
+  const position2 = EventTarget.elements.amount;
 
   createPromise(position, delay)
     .then((result) => {
