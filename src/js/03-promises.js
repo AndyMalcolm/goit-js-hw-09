@@ -1,11 +1,11 @@
-function createPromise(position, delay) {
+function createPromise(step, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
       if (shouldResolve) {
-        resolve({ position, delay });
+        resolve({ step, delay });
       } else {
-        reject({ position, delay });
+        reject({ step, delay });
       }
     }, delay);
   });
@@ -13,11 +13,11 @@ function createPromise(position, delay) {
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const delay = EventTarget.elements.delay;
-  const position = EventTarget.elements.step;
-  const position2 = EventTarget.elements.amount;
+  const delay = form.elements.delay.value;
+  const step = form.elements.step.value;
+  const amount = form.elements.amount.value;
 
-  createPromise(position, delay)
+  createPromise(step, delay)
     .then((result) => {
       console.log('Promise resolved:', result);
     })
