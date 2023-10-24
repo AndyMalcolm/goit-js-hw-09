@@ -8,6 +8,7 @@ function createPromise(step, delay) {
         reject({ step, delay });
       }
     }, delay);
+    delay = Number(delay) + Number(step);
   });
 }
 
