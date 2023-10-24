@@ -15,7 +15,6 @@ function handleFormSubmit(event) {
   event.preventDefault();
   const delay = form.elements.delay.value;
   const step = form.elements.step.value;
-  const amount = form.elements.amount.value;
 
   createPromise(step, delay)
     .then((result) => {
