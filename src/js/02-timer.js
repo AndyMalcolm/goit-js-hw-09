@@ -19,7 +19,7 @@ function getTimeRemaining(endtime) {
 }
 
 function addLeadingZero(value) {
-  return value < 10 ? `0${value}` : value;
+  return String(value).padStart(2, '0');
 }
 
 const datetimePicker = document.getElementById("datetime-picker");
