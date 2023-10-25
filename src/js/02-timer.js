@@ -40,7 +40,7 @@ const options = {
   enableTime: true,
   time_24hr: true,
   minuteIncrement: 1,
-  onClose: function (selectedDates) {
+  onClose: function ([selectedDates]) {
 
     if (selectedDates <= new Date()) {
       alert("Please choose a date in the future");
@@ -54,7 +54,7 @@ const options = {
 flatpickr(datetimePicker, options);
 
 startButton.addEventListener("click", function () {
-  const selectedDate = flatpickr.parseDate(datetimePicker.value);
+  const selectedDate = new Date (datetimePicker.value);
   const countdown = setInterval(updateCountdown, 1000);
 
   function updateCountdown() {
