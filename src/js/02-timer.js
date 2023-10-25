@@ -54,7 +54,7 @@ const options = {
 flatpickr(datetimePicker, options);
 
 startButton.addEventListener("click", function () {
-  const selectedDate = new Date (datetimePicker.value);
+  const selectedDate = new Date(datetimePicker.value);
   const countdown = setInterval(updateCountdown, 1000);
 
   function updateCountdown() {
