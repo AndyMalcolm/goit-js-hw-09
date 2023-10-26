@@ -1,2 +1,0 @@
-const e=document.querySelector("form");e.addEventListener("submit",(function(o){o.preventDefault();const n=e.elements.delay.value,r=e.elements.step.value,l=e.elements.amount.value;for(let e=0;e<l;e++)t(r,n).then((e=>{console.log("Promise resolved:",e)})).catch((e=>{console.error("Promise rejected:",e)})),n=Number(n)+Number(r)}));const t=document.querySelector;
-//# sourceMappingURL=03-promises.2ba4235b.js.map
