@@ -17,16 +17,16 @@ function handleFormSubmit(event) {
 }
 const form = document.querySelector('form');
 form.addEventListener('submit', handleFormSubmit);
-const createPromise = document.querySelector;
+
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     
     setTimeout(() => {
       if (shouldResolve) {
-        resolve("Promise resolved");
+        resolve(`Fulfiled promise ${position} in ${delay}ms`);
       } else {
-        reject("Promise rejected");
+        reject(`Rejected promise ${position} in ${delay}ms`);
       }
     }, delay);
   });
