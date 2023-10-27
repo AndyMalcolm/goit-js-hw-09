@@ -3,20 +3,23 @@ function handleFormSubmit(event) {
   const delay = form.elements.delay.value;
   const step = form.elements.step.value;
   const amount = form.elements.amount.value;
+  let newDelay = Number(delay);
 
   for (let i = 0; i < amount; i++) {
-    createPromise(step, delay)
+    createPromise(step, newDelay)
       .then((result) => {
         console.log('Promise resolved:', result);
       })
       .catch((error) => {
         console.error('Promise rejected:', error);
       });
-    delay = Number(delay) + Number(step);
+    newDelay += Number(step);
   }
 }
+
 const form = document.querySelector('form');
 form.addEventListener('submit', handleFormSubmit);
+
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
