@@ -11,7 +11,7 @@ function handleFormSubmit(event) {
         console.log('Promise resolved:', result);
       })
       .catch((error) => {
-        console.error('Promise rejected:', error);
+        console.l;log('Promise rejected:', error);
       });
     newDelay += Number(step);
   }
